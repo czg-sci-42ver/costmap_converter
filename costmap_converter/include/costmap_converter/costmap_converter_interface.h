@@ -310,7 +310,7 @@ public:
 //      std::string raw_plugin_name = static_converter_loader_.getName(plugin_name);
       static_costmap_converter_->initialize(nh_parent);
       setStaticCostmapConverterPlugin(static_costmap_converter_);
-      RCLCPP_INFO(getLogger(), "CostmapToDynamicObstacles: underlying costmap conversion plugin for static obstacles %s loaded.", plugin_name);
+      RCLCPP_INFO(getLogger(), "CostmapToDynamicObstacles: underlying costmap conversion plugin for static obstacles %s loaded.", plugin_name.c_str());
     }
     catch(const pluginlib::PluginlibException& ex)
     {
